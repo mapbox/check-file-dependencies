@@ -53,10 +53,10 @@ test('errors if a module is in package.json but not in node_modules', function(a
   });
 });
 
-test('errors if a module has a different version inpackage.json than in node_modules', function(assert) {
+test('errors if a module has a different version in package.json than in node_modules', function(assert) {
   checkFileDependencies(path.join(__dirname, 'fixtures', 'bad-version', 'index.js'), function(err) {
     if (err === undefined) return assert.end(new Error('expected an error'));
-    assert.equal(err.message, 'lodash does not match package.json', 'right error message');
+    assert.equal(err.message, 'Expected version 1.0.0 of lodash but found 4.17.4', 'right error message');
     assert.end();
   });
 });
