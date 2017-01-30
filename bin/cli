@@ -1,0 +1,22 @@
+#!/usr/bin/env node
+
+var path = require('path');
+var cfd = require('..');
+
+var file = process.argv[2];
+
+if (file === undefined) {
+  console.log('Must supply a file');
+}
+
+if (file[0] !== '/') {
+  file = path.join(process.cwd(), file);
+}
+
+cfd(file, function(err) {
+  if (err === undefined) {
+    return console.log('Dependencies are up to date');
+  }
+  console.log(err.message);
+  process.exit(1);
+});

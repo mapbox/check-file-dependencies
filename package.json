@@ -7,5 +7,34 @@
   },
   "devDependencies": {
     "tape": "4.6.3"
-  }
+  },
+  "bin": {
+    "check-file-dependencies": "./bin/cli"
+  },
+  "name": "@mapbox/check-file-dependencies",
+  "description": "Takes a file path and checks to see if the modules it requires match the package.json",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node test/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mapbox/check-file-dependencies.git"
+  },
+  "keywords": [
+    "dependencies",
+    "check",
+    "confirm",
+    "valid"
+  ],
+  "author": "Mapbox",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mapbox/check-file-dependencies/issues"
+  },
+  "homepage": "https://github.com/mapbox/check-file-dependencies#readme"
 }
