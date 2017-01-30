@@ -1,5 +1,7 @@
 # Check File Dependencies
 
+[![](https://travis-ci.org/mapbox/check-file-dependencies.svg?branch=master)](https://travis-ci.org/mapbox/check-file-dependencies)
+
 Takes a file path and checks to see if the modules it requires match the package.json
 
 ## Usage
