@@ -48,7 +48,7 @@ test('fails when file references module in node_modules but not in package.json'
 test('errors if a module is in package.json but not in node_modules', function(assert) {
   checkFileDependencies(path.join(__dirname, 'fixtures', 'missing', 'index.js'), function(err) {
     if (err === undefined) return assert.end(new Error('expected an error'));
-    assert.equal(err.message, 'lodash is not installed', 'right error message');
+    assert.equal(err.message, 'Missing package lodash', 'right error message');
     assert.end();
   });
 });
