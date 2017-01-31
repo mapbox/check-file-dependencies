@@ -67,3 +67,27 @@ test('works with modules split acorss different node_module folders', function(a
     assert.end();
   });
 });
+
+test('validates and pass tarballs', function(assert) {
+  checkFileDependencies(path.join(__dirname, 'fixtures', 'tarball-pass', 'index.js'), function(err) {
+    assert.ifError(err, 'this module should be good');
+    assert.end();
+  });
+});
+
+test('validates and fails tarballs based on bad versions', function(assert) {
+  checkFileDependencies(path.join(__dirname, 'fixtures', 'tarball-fail-version', 'index.js'), function(err) {
+    if (err === undefined) return assert.end(new Error('expected an error'));
+    assert.equal(err.message, 'Expected version 4.1.2 of npm but found 3.10.10', 'right error message');
+    assert.end();
+  });
+});
+
+test('validates and fails tarballs based on bad versions', function(assert) {
+  checkFileDependencies(path.join(__dirname, 'fixtures', 'tarball-fail-package', 'index.js'), function(err) {
+    if (err === undefined) return assert.end(new Error('expected an error'));
+    assert.equal(err.message, 'Found name:jsonify in package.json from at https://github.com/substack/jsonify/tarball/master. Expected npm', 'right error message');
+    assert.end();
+  });
+});
+
