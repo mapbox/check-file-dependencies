@@ -78,7 +78,7 @@ test('validates and pass tarballs', function(assert) {
 test('validates and fails tarballs based on bad versions', function(assert) {
   checkFileDependencies(path.join(__dirname, 'fixtures', 'tarball-fail-version', 'index.js'), function(err) {
     if (err === undefined) return assert.end(new Error('expected an error'));
-    assert.equal(err.message, 'Expected version 4.1.2 of npm but found 3.10.10', 'right error message');
+    assert.equal(err.message, 'Content of npm does not match content of https://github.com/npm/npm/archive/v4.1.2.tar.gz', 'right error message');
     assert.end();
   });
 });
@@ -86,7 +86,7 @@ test('validates and fails tarballs based on bad versions', function(assert) {
 test('validates and fails tarballs based on bad versions', function(assert) {
   checkFileDependencies(path.join(__dirname, 'fixtures', 'tarball-fail-package', 'index.js'), function(err) {
     if (err === undefined) return assert.end(new Error('expected an error'));
-    assert.equal(err.message, 'Found name:jsonify in package.json from at https://github.com/substack/jsonify/tarball/master. Expected npm', 'right error message');
+    assert.equal(err.message, 'Content of npm does not match content of https://github.com/substack/jsonify/tarball/master', 'right error message');
     assert.end();
   });
 });

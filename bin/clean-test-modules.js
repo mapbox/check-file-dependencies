@@ -9,6 +9,7 @@ var testModules = fs.readdirSync(fixtureFolder);
 for (var i=0; i<testModules.length; i++) {
   var testModule = testModules[i];
   if (testModule === '.gitignore') continue;
+  if (testModule === 'tarball-pass') continue;
   console.log('cleaning '+testModule);
   var subModuleFolder = path.join(fixtureFolder, testModule, 'node_modules');
   var subModules = fs.readdirSync(subModuleFolder);
