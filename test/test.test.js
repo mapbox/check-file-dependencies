@@ -91,3 +91,12 @@ test('validates and fails tarballs based on bad versions', function(assert) {
   });
 });
 
+test('fails if the file requires evaluation to determine require path', function(assert) {
+  checkFileDependencies(path.join(__dirname, 'fixtures', 'eval-require', 'index.js'), function(err) {
+    if (err === undefined) return assert.end(new Error('expected an error'));
+    assert.equal(err.message, 'Unable to resolve require(\'hi\' + \'bye\') in test/fixtures/eval-require/index.js', 'right error message');
+    assert.end();
+  });
+        
+});
+

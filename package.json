@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "astw": "2.0.0",
+    "escodegen": "^1.8.1",
     "got": "^6.7.1",
     "parents": "1.0.1",
     "resolve": "1.2.0",
