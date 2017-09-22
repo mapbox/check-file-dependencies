@@ -2,8 +2,15 @@
 
 var path = require('path');
 var cfd = require('..');
+var listCmd = require('./list');
 
 var file = process.argv[2];
+
+var list = file === '--list-deps' ? true : false;
+
+if (list) {
+  file = process.argv[3];
+}
 
 if (file === undefined) {
   console.log('Must supply a file');
@@ -11,6 +18,10 @@ if (file === undefined) {
 
 if (file[0] !== '/') {
   file = path.join(process.cwd(), file);
+}
+
+if (list) {
+  return listCmd(file);
 }
 
 cfd(file, function(err) {
