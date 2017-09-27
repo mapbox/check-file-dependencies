@@ -2,7 +2,7 @@
 
 [![](https://travis-ci.org/mapbox/check-file-dependencies.svg?branch=master)](https://travis-ci.org/mapbox/check-file-dependencies)
 
-Takes a file path and checks to see if the modules it requires match the package.json
+Takes a file path and checks to see if the modules installed match what is in the package.json
 
 ## Usage
 
@@ -19,4 +19,10 @@ Or as a CLI
 
 ```
 check-file-dependencies ./path/to/file.js
+```
+
+### To list dependencies
+
+```
+check-file-dependencies --list-deps ./path/to/file.js
 ```
