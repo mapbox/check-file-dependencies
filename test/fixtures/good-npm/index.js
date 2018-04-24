@@ -74,3 +74,5 @@ require('validate-npm-package-name');
 require('which');
 require('wrappy');
 require('write-file-atomic');
+require('wrappy/dist/nice');
+require('@mapbox/check-file-dependencies');
