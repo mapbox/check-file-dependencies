@@ -4,7 +4,7 @@
   "version": "3.0.2",
   "main": "index.js",
   "dependencies": {
-    "astw": "2.0.0",
+    "acorn": "^5.5.3",
     "escodegen": "^1.8.1",
     "got": "^6.7.1",
     "parents": "1.0.1",
