@@ -68,6 +68,13 @@ test('works with modules split acorss different node_module folders', function(a
   });
 });
 
+test('works with a module that includes a hashbang for command-line usage', function (assert) {
+  checkFileDependencies(path.join(__dirname, 'fixtures', 'hashbang', 'cli.js'), function (err) {
+    assert.ifError(err, 'this module should be good');
+    assert.end();
+  });
+});
+
 test('validates and pass tarballs', function(assert) {
   checkFileDependencies(path.join(__dirname, 'fixtures', 'tarball-pass', 'index.js'), function(err) {
     assert.ifError(err, 'this module should be good');
@@ -97,6 +104,5 @@ test('fails if the file requires evaluation to determine require path', function
     assert.equal(err.message, 'Unable to resolve require(\'hi\' + \'bye\') in test/fixtures/eval-require/index.js', 'right error message');
     assert.end();
   });
-        
 });
 
