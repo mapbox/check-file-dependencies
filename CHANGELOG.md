@@ -1,5 +1,9 @@
 # Check File Dependencies Changelog
 
+## 3.2.1
+
+- tar@2.2.2 and fstream@1.0.12 according to security alerts
+
 ## 3.2.0
 
 - Add support for `!#/usr/bin/env node` or `hasbang` scripts.
