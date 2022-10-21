@@ -93,7 +93,7 @@ test('validates and fails tarballs based on bad versions', function(assert) {
 test('validates and fails tarballs based on bad versions', function(assert) {
   checkFileDependencies(path.join(__dirname, 'fixtures', 'tarball-fail-package', 'index.js'), function(err) {
     if (err === undefined) return assert.end(new Error('expected an error'));
-    assert.equal(err.message, 'Content of npm does not match content of https://github.com/substack/jsonify/tarball/master', 'right error message');
+    assert.equal(err.message, 'Content of npm does not match content of https://github.com/ljharb/jsonify/tarball/master', 'right error message');
     assert.end();
   });
 });
