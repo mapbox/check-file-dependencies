@@ -1,5 +1,14 @@
 # Check File Dependencies Changelog
 
+## 4.0.0
+- Drop support for node 6 and 8
+- Add support for node 12 and 14
+- Security Vulnerability Fix
+  - npm audit fix
+    - minimist
+    - minimatch
+  - Update tar from 2.2.2 to 6.1.11
+
 ## 3.2.1
 
 - tar@2.2.2 and fstream@1.0.12 according to security alerts

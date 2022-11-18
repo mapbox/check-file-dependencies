@@ -6,7 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "npm": "https://github.com/substack/jsonify/tarball/master"
+    "npm": "https://github.com/ljharb/jsonify/tarball/master"
   },
   "author": "",
   "license": "ISC",
