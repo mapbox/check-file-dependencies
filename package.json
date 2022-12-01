@@ -1,7 +1,7 @@
 {
   "name": "@mapbox/check-file-dependencies",
   "description": "Takes a file path and checks to see if the modules it requires match the package.json",
-  "version": "3.2.1",
+  "version": "4.0.0",
   "main": "index.js",
   "dependencies": {
     "acorn": "^5.5.3",
