@@ -9,6 +9,14 @@ test('works on itself', function(assert) {
   });
 });
 
+test('throws a syntax error if the file is not valid javascript', function(assert) {
+  checkFileDependencies(path.join(__dirname, 'fixtures', 'bad-code', 'expected-file-name.js'), function(err) {
+    assert.is(err instanceof SyntaxError, true, 'is a syntax error');
+    assert.ok(err.message.includes('expected-file-name.js'), 'contains the file name in the syntax error');
+    assert.end();
+  });
+})
+
 test('works with a bunch of modules in one folder', function(assert) {
   checkFileDependencies(path.join(__dirname, 'fixtures', 'good-npm', 'index.js'), function(err) {
     assert.ifError(err, 'this module should be good');
@@ -19,6 +27,7 @@ test('works with a bunch of modules in one folder', function(assert) {
 test('works with ambigous ranges where a very low version is installed', function(assert) {
   checkFileDependencies(path.join(__dirname, 'fixtures', 'ambiguous-low', 'index.js'), function(err) {
     assert.ifError(err, 'this module should be good');
+    
     assert.end();
   });
 });
