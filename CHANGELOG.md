@@ -1,6 +1,6 @@
 # Check File Dependencies Changelog
 
-## UNRELEASED
+## 5.0.0
 
 - Drop support for node 12 and 14
 - Add support for node 18 and 20
