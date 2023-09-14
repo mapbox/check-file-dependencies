@@ -1,6 +1,14 @@
 # Check File Dependencies Changelog
 
+## UNRELEASED
+
+- Drop support for node 12 and 14
+- Add support for node 18 and 20
+- Update acorn to v8.x
+  - This introduces a dependency to acorn-walk
+
 ## 4.0.0
+
 - Drop support for node 6 and 8
 - Add support for node 12 and 14
 - Security Vulnerability Fix

@@ -3,8 +3,12 @@
   "description": "Takes a file path and checks to see if the modules it requires match the package.json",
   "version": "4.0.0",
   "main": "index.js",
+  "engines": {
+    "node": ">=18"
+  },
   "dependencies": {
-    "acorn": "^5.5.3",
+    "acorn": "^8.10.0",
+    "acorn-walk": "^8.2.0",
     "escodegen": "^1.8.1",
     "got": "^6.7.1",
     "parents": "1.0.1",
