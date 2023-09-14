@@ -4,6 +4,7 @@
 
 - Drop support for node 12 and 14
 - Add support for node 18 and 20
+- Add filename to parsing error raised by acorn when attempting to parse invalid Javascript
 - Update acorn to v8.x
   - This introduces a dependency to acorn-walk
 
