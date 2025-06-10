@@ -1,5 +1,19 @@
 # Check File Dependencies Changelog
 
+## 6.0.0
+- Dropping support for Node 18 and 20
+- Add support for node 22+
+- Updated most dependencies
+  - Acorn 8.10.0 -> 8.15.0
+  - Acorn-walk 8.2.0 -> 8.3.4
+  - escodegen 1.8.1 -> 2.1.0
+  - got 6.7.1 -> 11.8.5
+  - parents no change
+  - resolve 1.2.0 -> 1.22.10
+  - semver 5.3.0 -> 7.7.2
+  - tar 6.1.11 -> 6.2.1
+- Update dev dependency tape 4.6.3 -> 5.9.0
+
 ## 5.0.0
 
 - Drop support for node 12 and 14
