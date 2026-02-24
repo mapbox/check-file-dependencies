@@ -1,0 +1,105 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+  "baseBranchPatterns": ["master"],
+  "rangeStrategy": "bump",
+  "draftPR": true,
+  "separateMultipleMajor": false,
+  "prConcurrentLimit": 10,
+  "prHourlyLimit": 2,
+  "packageRules": [
+    {
+      "description": "Group AWS SDK and @mapbox/cloudfriend together.",
+      "matchManagers": ["npm"],
+      "matchDepTypes": ["dependencies"],
+      "matchPackageNames": [
+        "@aws-sdk/*",
+        "@mapbox/cloudfriend"
+      ],
+      "groupName": "infra dependencies",
+      "groupSlug": "infra-dependencies"
+    },
+    {
+      "description": "Group runtime @mapbox package non-major updates.",
+      "matchManagers": ["npm"],
+      "matchDepTypes": ["dependencies"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchPackageNames": [
+        "@mapbox/*",
+        "!@mapbox/cloudfriend"
+      ],
+      "groupName": "mapbox runtime minor/patch",
+      "groupSlug": "mapbox-runtime-nonmajor"
+    },
+    {
+      "description": "Group runtime @mapbox package major updates.",
+      "matchManagers": ["npm"],
+      "matchDepTypes": ["dependencies"],
+      "matchUpdateTypes": ["major"],
+      "matchPackageNames": [
+        "@mapbox/*",
+        "!@mapbox/cloudfriend"
+      ],
+      "groupName": "mapbox runtime major",
+      "groupSlug": "mapbox-runtime-major"
+    },
+    {
+      "description": "Group non-Mapbox runtime npm non-major updates.",
+      "matchManagers": ["npm"],
+      "matchDepTypes": ["dependencies"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "npm runtime minor/patch",
+      "groupSlug": "npm-runtime-nonmajor",
+      "matchPackageNames": [
+        "!@aws-sdk/*",
+        "!@mapbox/*"
+      ]
+    },
+    {
+      "description": "Group non-Mapbox runtime npm major updates.",
+      "matchManagers": ["npm"],
+      "matchDepTypes": ["dependencies"],
+      "matchUpdateTypes": ["major"],
+      "groupName": "npm runtime major",
+      "groupSlug": "npm-runtime-major",
+      "matchPackageNames": [
+        "!@aws-sdk/*",
+        "!@mapbox/*"
+      ]
+    },
+    {
+      "description": "Group npm tooling non-major updates.",
+      "matchManagers": ["npm"],
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "npm tooling minor/patch",
+      "groupSlug": "npm-tooling-nonmajor",
+      "matchPackageNames": [
+        "!@aws-sdk/*"
+      ]
+    },
+    {
+      "description": "Group npm tooling major updates.",
+      "matchManagers": ["npm"],
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["major"],
+      "groupName": "npm tooling major",
+      "groupSlug": "npm-tooling-major",
+      "matchPackageNames": [
+        "!@aws-sdk/*"
+      ]
+    },
+    {
+      "description": "Group GitHub Action updates.",
+      "matchManagers": ["github-actions"],
+      "groupName": "github actions",
+      "groupSlug": "github-actions"
+    },
+    {
+      "description": "Group Docker image updates.",
+      "matchManagers": ["dockerfile", "docker-compose"],
+      "groupName": "docker images",
+      "groupSlug": "docker-images"
+    }
+  ]
+}
