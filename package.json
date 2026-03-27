@@ -43,5 +43,8 @@
   "bugs": {
     "url": "https://github.com/mapbox/check-file-dependencies/issues"
   },
-  "homepage": "https://github.com/mapbox/check-file-dependencies#readme"
+  "homepage": "https://github.com/mapbox/check-file-dependencies#readme",
+  "overrides": {
+    "minimatch": ">=3.1.3"
+  }
 }
