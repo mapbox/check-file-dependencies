@@ -7,14 +7,14 @@
     "node": ">=22.0.0"
   },
   "dependencies": {
-    "acorn": "^8.15.0",
-    "acorn-walk": "^8.3.4",
+    "acorn": "^8.16.0",
+    "acorn-walk": "^8.3.5",
     "escodegen": "^2.1.0",
-    "got": "^11.8.5",
+    "got": "^11.8.6",
     "parents": "1.0.1",
-    "resolve": "1.22.10",
-    "semver": "^7.7.2",
-    "tar": "^7.5.8"
+    "resolve": "1.22.12",
+    "semver": "^7.7.4",
+    "tar": "^7.5.13"
   },
   "devDependencies": {
     "tape": "5.9.0"
