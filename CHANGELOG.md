@@ -1,5 +1,9 @@
 # Check File Dependencies Changelog
 
+## 6.0.1
+
+- Change an internal hash used to make comparisons from md5 to sha256 (because of a Prisma complaint)
+
 ## 6.0.0
 - Dropping support for Node 18 and 20
 - Add support for node 22+
