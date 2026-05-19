@@ -45,6 +45,6 @@
   },
   "homepage": "https://github.com/mapbox/check-file-dependencies#readme",
   "overrides": {
-    "minimatch": ">=3.1.5"
+    "minimatch": ">=10.2.5"
   }
 }
