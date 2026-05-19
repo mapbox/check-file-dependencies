@@ -1,12 +1,24 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended"],
+  "extends": [
+    "config:recommended",
+    "github>mapbox/mbx-renovate-config:grouping",
+    "github>mapbox/mbx-renovate-config:security"
+  ],
+  "automergeSchedule": ["at any time"],
+  "platformAutomerge": true,
+  "draftPR": false,
+  "separateMinorPatch": true,
+  "rebaseWhen": "behind-base-branch",
+  "labels": ["renovate"],
   "baseBranchPatterns": ["master"],
   "rangeStrategy": "bump",
-  "draftPR": true,
   "separateMultipleMajor": false,
   "prConcurrentLimit": 10,
   "prHourlyLimit": 2,
+  "gitIgnoredAuthors": [
+    "41898282+github-actions[bot]@users.noreply.github.com"
+  ],
   "packageRules": [
     {
       "description": "Group AWS SDK and @mapbox/cloudfriend together.",
