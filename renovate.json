@@ -112,6 +112,12 @@
       "matchManagers": ["dockerfile", "docker-compose"],
       "groupName": "docker images",
       "groupSlug": "docker-images"
+    },
+    {
+      "description": "Pin got to v11. v12+ is ESM-only and lib/vet/tarball.js uses CommonJS require().",
+      "matchManagers": ["npm"],
+      "matchPackageNames": ["got"],
+      "allowedVersions": "^11.8.6"
     }
   ]
 }
