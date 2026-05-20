@@ -21,6 +21,22 @@
   ],
   "packageRules": [
     {
+      "matchUpdateTypes": ["patch"],
+      "addLabels": ["patch"],
+      "automerge": true,
+      "autoApprove": true
+    },
+    {
+      "matchUpdateTypes": ["minor"],
+      "addLabels": ["minor"],
+      "automerge": true,
+      "autoApprove": true
+    },
+    {
+      "matchUpdateTypes": ["major"],
+      "addLabels": ["major"]
+    },
+    {
       "description": "Group AWS SDK and @mapbox/cloudfriend together.",
       "matchManagers": ["npm"],
       "matchDepTypes": ["dependencies"],
