@@ -17,7 +17,7 @@
     "tar": "^7.5.16"
   },
   "devDependencies": {
-    "tape": "5.10.1"
+    "tape": "5.10.2"
   },
   "bin": {
     "check-file-dependencies": "./bin/cli"
