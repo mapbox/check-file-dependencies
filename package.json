@@ -1,7 +1,7 @@
 {
   "name": "@mapbox/check-file-dependencies",
   "description": "Takes a file path and checks to see if the modules it requires match the package.json",
-  "version": "6.0.3",
+  "version": "6.0.4",
   "main": "index.js",
   "engines": {
     "node": ">=24.17.0"
@@ -46,5 +46,8 @@
   "homepage": "https://github.com/mapbox/check-file-dependencies#readme",
   "overrides": {
     "minimatch": ">=10.2.5"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
