@@ -3,6 +3,7 @@
   "extends": [
     "config:recommended",
     "github>mapbox/mbx-renovate-config:grouping",
+    "github>mapbox/mbx-renovate-config:cloud-plat",
     "github>mapbox/mbx-renovate-config:security"
   ],
   "automergeSchedule": ["at any time"],
@@ -10,7 +11,6 @@
   "draftPR": false,
   "separateMinorPatch": true,
   "rebaseWhen": "behind-base-branch",
-  "labels": ["renovate"],
   "baseBranchPatterns": ["master"],
   "rangeStrategy": "bump",
   "separateMultipleMajor": false,
@@ -21,20 +21,9 @@
   ],
   "packageRules": [
     {
-      "matchUpdateTypes": ["patch"],
-      "addLabels": ["patch"],
+      "matchUpdateTypes": ["patch", "minor"],
       "automerge": true,
       "autoApprove": true
-    },
-    {
-      "matchUpdateTypes": ["minor"],
-      "addLabels": ["minor"],
-      "automerge": true,
-      "autoApprove": true
-    },
-    {
-      "matchUpdateTypes": ["major"],
-      "addLabels": ["major"]
     },
     {
       "description": "Group AWS SDK and @mapbox/cloudfriend together.",
