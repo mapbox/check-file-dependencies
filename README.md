@@ -1,4 +1,7 @@
-# Check File Dependencies
+# Check File Dependencies - DEPRECATED
+
+> [!IMPORTANT]
+> This tool/repository are being deprecated and archived. We recommend using https://www.npmjs.com/package/check-dependencies instead.
 
 Takes a file path and checks to see if the modules it requires match the package.json
 
@@ -18,13 +21,3 @@ Or as a CLI
 ```
 check-file-dependencies ./path/to/file.js
 ```
-
-## Contributing
-
-- Open a PR
-  - Include changes in Changelog.md
-- Merge PR
-- Locally switch to master
-  - `npm version [major, minor, patch]`
-  - `git push origin master --tags`
-  - `npm publish`
